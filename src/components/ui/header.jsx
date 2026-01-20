@@ -20,11 +20,10 @@ export default function Header() {
     }, []);
 
     const navLinks = [
-        { name: "Home", href: "/" },
-        { name: "Projects", href: "/properties" },
-        { name: "About Us", href: "/about" },
-        { name: "Locations", href: "/location" },
-        { name: "Contact Us", href: "/contact" },
+        { name: "Properties", href: "/properties" },
+        { name: "Why Choose Us", href: "/#why-choose-us" },
+        { name: "Location", href: "/location" },
+        { name: "Contact", href: "/contact" },
     ];
 
     return (
@@ -71,7 +70,7 @@ export default function Header() {
                     </button>
 
                     <Link href="/schedule-visit" className="ml-2">
-                        <button className="bg-accent text-white px-8 py-3 rounded-full text-[11px] font-bold uppercase tracking-widest hover:opacity-90 transition-all shadow-xl shadow-accent/20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-accent">
+                        <button className="bg-[#703014] text-white px-8 py-3 rounded-xl text-[11px] font-bold uppercase tracking-widest hover:bg-[#5a2610] transition-all shadow-xl shadow-[#703014]/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#703014]">
                             Schedule Visit
                         </button>
                     </Link>
@@ -137,7 +136,7 @@ export default function Header() {
 
                         <div className="mt-auto">
                             <Link href="/schedule-visit" onClick={() => setMobileMenuOpen(false)}>
-                                <button className="bg-accent text-white w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-sm shadow-2xl shadow-accent/30">
+                                <button className="bg-[#703014] text-white w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-sm shadow-2xl shadow-[#703014]/20">
                                     Schedule a Visit
                                 </button>
                             </Link>
