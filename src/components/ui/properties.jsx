@@ -108,19 +108,18 @@ const properties = [
 // Simplified card component
 function PropertyCard({ property, index, children }) {
     return (
-        <div className={`property-card group overflow-hidden premium-shadow border transition-all duration-700 flex flex-col cursor-pointer ${
-            index === 0
-                ? "bg-gradient-to-br from-blue-50 to-indigo-100 rounded-[3rem] border-blue-200 hover:border-blue-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3"
-                : index === 1
+        <div className={`property-card group overflow-hidden premium-shadow border transition-all duration-700 flex flex-col cursor-pointer ${index === 0
+            ? "bg-gradient-to-br from-blue-50 to-indigo-100 rounded-[3rem] border-blue-200 hover:border-blue-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3"
+            : index === 1
                 ? "bg-gradient-to-br from-emerald-50 to-teal-100 rounded-[2.5rem] border-emerald-200 hover:border-emerald-300 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2"
                 : index === 2
-                ? "bg-gradient-to-br from-purple-50 to-violet-100 rounded-[3rem] border-purple-200 hover:border-purple-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-3"
-                : index === 3
-                ? "bg-gradient-to-br from-rose-50 to-pink-100 rounded-[2.5rem] border-rose-200 hover:border-rose-300 hover:shadow-2xl hover:shadow-rose-500/20 hover:-translate-y-2"
-                : index === 4
-                ? "bg-gradient-to-br from-amber-50 to-orange-100 rounded-[3rem] border-amber-200 hover:border-amber-300 hover:shadow-2xl hover:shadow-amber-500/20 hover:-translate-y-3"
-                : "bg-gradient-to-br from-slate-50 to-gray-100 rounded-[2.5rem] border-slate-200 hover:border-slate-300 hover:shadow-2xl hover:shadow-slate-500/20 hover:-translate-y-2"
-        }`}>
+                    ? "bg-gradient-to-br from-purple-50 to-violet-100 rounded-[3rem] border-purple-200 hover:border-purple-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-3"
+                    : index === 3
+                        ? "bg-gradient-to-br from-rose-50 to-pink-100 rounded-[2.5rem] border-rose-200 hover:border-rose-300 hover:shadow-2xl hover:shadow-rose-500/20 hover:-translate-y-2"
+                        : index === 4
+                            ? "bg-gradient-to-br from-amber-50 to-orange-100 rounded-[3rem] border-amber-200 hover:border-amber-300 hover:shadow-2xl hover:shadow-amber-500/20 hover:-translate-y-3"
+                            : "bg-gradient-to-br from-slate-50 to-gray-100 rounded-[2.5rem] border-slate-200 hover:border-slate-300 hover:shadow-2xl hover:shadow-slate-500/20 hover:-translate-y-2"
+            }`}>
             {children}
         </div>
     );
@@ -258,7 +257,7 @@ export default function Properties() {
                                                 placeholder="blur"
                                                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+IRjWjBqO6O2mhP//Z"
                                             />
-                                            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700" />
 
                                             <div className="absolute top-6 left-6 px-4 py-1.5 glass rounded-full text-[10px] font-bold uppercase tracking-widest text-foreground" role="status" aria-label={`Property status: ${property.status}`}>
                                                 {property.status}
@@ -270,7 +269,7 @@ export default function Properties() {
                                                 <Heart size={18} aria-hidden="true" />
                                             </button>
 
-                                            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white translate-y-12 group-hover:translate-y-0 transition-transform duration-700">
+                                            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white transition-all duration-700 opacity-100 translate-y-0 md:opacity-0 md:translate-y-12 md:group-hover:opacity-100 md:group-hover:translate-y-0">
                                                 <span className="text-xs font-medium flex items-center gap-2">
                                                     <Expand size={14} /> {property.sqft} Sq.Ft
                                                 </span>
