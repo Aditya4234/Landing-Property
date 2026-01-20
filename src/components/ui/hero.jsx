@@ -18,7 +18,7 @@ export default function Hero() {
                     priority
                     quality={90}
                 />
-                <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-white/30 backdrop-blur-[1px]" />
             </div>
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
