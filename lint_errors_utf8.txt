@@ -1,0 +1,38 @@
+﻿
+C:\Users\aditya\OneDrive\Desktop\property-landing\frontend\src\app\about\page.js
+  18:93  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\aditya\OneDrive\Desktop\property-landing\frontend\src\app\contact\page.js
+  28:149  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\aditya\OneDrive\Desktop\property-landing\frontend\src\app\schedule-visit\page.js
+   56:102  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  116:34   error  'motion' is not defined                                          react/jsx-no-undef
+
+C:\Users\aditya\OneDrive\Desktop\property-landing\frontend\src\components\ui\location-highlight.jsx
+  53:115  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  67:181  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\aditya\OneDrive\Desktop\property-landing\frontend\src\components\ui\testimonials.jsx
+  83:37  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  83:59  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\aditya\OneDrive\Desktop\property-landing\frontend\src\components\ui\theme-provider.jsx
+  26:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  24 |     // Check for saved theme preference or default to light mode
+  25 |     const savedTheme = localStorage.getItem("theme") || "light";
+> 26 |     setTheme(savedTheme);
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  27 |     setMounted(true);
+  28 |   }, [setTheme, setMounted]);
+  29 |  react-hooks/set-state-in-effect
+
+Γ£û 9 problems (9 errors, 0 warnings)
+
